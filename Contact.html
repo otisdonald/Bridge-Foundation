@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - The Bridge Foundation</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Contact The Bridge Foundation to partner, volunteer, or learn more about our programs empowering women and youths in Nigeria.">
+</head>
+<body>
+
+<header>
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="images/logo.png" alt="The Bridge Foundation Logo" loading="lazy">
+    </div>
+
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <h1>Contact Us</h1>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <form class="contact-form" action="#" method="POST">
+      <input type="text" name="name" placeholder="Full Name" aria-label="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" aria-label="Email Address" required>
+      <textarea name="message" rows="5" placeholder="Your Message" aria-label="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <address class="contact-info">
+      <p>Email: <a href="mailto:thebridgefoundation@gmail.com">thebridgefoundation@gmail.com</a></p>
+      <p>Phone: <a href="tel:+2348037808194">+234 803 780 8194</a> | <a href="tel:+2349088942444">+234 908 894 2444</a></p>
+      <p>No 1 Peace Valley, Trans-Woji, Port Harcourt</p>
+    </address>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 The Bridge Foundation. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
+
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    hamburger.classList.toggle("active");
+  });
+}
+</script>
+
+</body>
+</html>

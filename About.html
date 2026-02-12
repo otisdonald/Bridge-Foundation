@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - The Bridge Foundation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="images/logo.png" alt="The Bridge Foundation Logo" loading="lazy">
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </div>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <h1>About Us</h1>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <h2>Who We Are</h2>
+    <p>The Bridge Foundation is committed to empowering women and youths through innovation, renewable energy solutions, health advocacy, entrepreneurship, and leadership development.</p>
+
+    <h2>Vision</h2>
+    <p>Empowering a generation of vibrant and inclusive communities where youths and women thrive as catalysts for transformative change.</p>
+
+    <h2>Mission</h2>
+    <p>To bridge gaps in capacity, opportunity, and social justice through education, advocacy, and community-driven initiatives.</p>
+
+    <h2>Core Values</h2>
+    <ul>
+      <li>Empowerment</li>
+      <li>Innovation</li>
+      <li>Leadership</li>
+      <li>Equity & Inclusion</li>
+      <li>Collaboration</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section light-bg fade-in">
+  <div class="container">
+    <h2>Problems We Solve</h2>
+    <div class="grid">
+      <div class="card"><h3>Gender Gap in Education</h3><p>Over 20 million Nigerian children are out of school, with girls making up nearly 60%.</p></div>
+      <div class="card"><h3>Renewable Energy</h3><p>85 million Nigerians lack reliable electricity, affecting women-led households and rural businesses.</p></div>
+      <div class="card"><h3>Health Disparities</h3><p>Nigeria has one of the highest maternal mortality rates globally.</p></div>
+      <div class="card"><h3>Leadership Representation</h3><p>Women hold less than 10% of leadership positions in Nigeria.</p></div>
+      <div class="card"><h3>Youth Unemployment</h3><p>Over 53% of Nigerian youths are unemployed.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 The Bridge Foundation. All Rights Reserved.</p>
+    <p>Follow us: <a href="https://instagram.com/thebridgefoundationngn">Instagram</a></p>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
