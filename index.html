@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Bridge Foundation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="images/logo.png" alt="The Bridge Foundation Logo" loading="lazy">
+    </div>
+
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Building Bridges. Breaking Barriers.</h1>
+    <p>Empowering women and youths through innovation, leadership, renewable energy, and collective impact.</p>
+    <a href="contact.html" class="btn">Partner With Us</a>
+  </div>
+</section>
+
+<section class="section fade-in">
+  <div class="container about-grid">
+    <div class="about-text">
+      <h2>About The Foundation</h2>
+      <p>
+        Established in 2024, The Bridge Foundation is a non-governmental organization committed to bridging gaps in capacity, opportunity, and social justice for women and youths across Nigeria.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="images/about.jpg" alt="Young women participating in Bridge Foundation program" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="section light-bg fade-in">
+  <div class="container">
+    <h2>Our Core Focus Areas</h2>
+    <div class="grid">
+      <div class="card"><h3>Education & Digital Skills</h3><p>STEM training, tech bootcamps, and mentorship programs.</p></div>
+      <div class="card"><h3>Renewable Energy</h3><p>Solar-powered solutions and climate resilience initiatives.</p></div>
+      <div class="card"><h3>Health & Well-being</h3><p>Mobile clinics, maternal health advocacy, and menstrual education.</p></div>
+      <div class="card"><h3>Leadership & Innovation</h3><p>Safe spaces and leadership development for young women.</p></div>
+      <div class="card"><h3>Entrepreneurship</h3><p>Incubation, accelerator programs, and funding access.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="impact-numbers fade-in">
+  <div class="container stats-grid">
+    <div><h2 class="counter" data-target="500">0</h2><p>Girls Empowered</p></div>
+    <div><h2 class="counter" data-target="100">0</h2><p>Teens Impacted</p></div>
+    <div><h2 class="counter" data-target="2024">0</h2><p>Year Established</p></div>
+  </div>
+</section>
+
+<section class="section fade-in">
+  <div class="container">
+    <h2>Programs & Impact</h2>
+    <div class="grid">
+      <div class="card"><h3>Tech Talk for Girls</h3><p>Empowered 500+ secondary school girls with digital confidence.</p></div>
+      <div class="card"><h3>Digital Mastery for Women</h3><p>Helping female entrepreneurs scale through digital tools.</p></div>
+      <div class="card"><h3>Teens Got Talent</h3><p>Supporting nearly 100 teens in talent discovery and innovation.</p></div>
+      <div class="card"><h3>NYSC Bootcamp</h3><p>Equipping corp members with digital and entrepreneurial skills.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Join Us in Creating Change</h2>
+    <a href="contact.html" class="btn light">Get Involved</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 The Bridge Foundation. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
+
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
+
+const faders = document.querySelectorAll(".fade-in");
+const appearOnScroll = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("appear");
+    appearOnScroll.unobserve(entry.target);
+  });
+}, { threshold: 0.3 });
+
+faders.forEach(fader => appearOnScroll.observe(fader));
+
+const counters = document.querySelectorAll(".counter");
+counters.forEach(counter => {
+  const updateCounter = () => {
+    const target = +counter.getAttribute("data-target");
+    const c = +counter.innerText;
+    const increment = target / 200;
+    if (c < target) {
+      counter.innerText = Math.ceil(c + increment);
+      setTimeout(updateCounter, 10);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCounter();
+});
+</script>
+
+</body>
+</html>
